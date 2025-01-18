@@ -19,7 +19,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        h1 {
+        h1, h2 {
             color: #333;
             text-align: center;
         }
@@ -27,12 +27,58 @@
             line-height: 1.6;
             color: #666;
         }
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #0066cc;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Our Page</h1>
-        <p>This is a simple webpage created as part of our GitHub repository test. We'll be adding more content soon!</p>
+        <p>This is a simple webpage created as part of our GitHub repository test.</p>
+        
+        <div class="section">
+            <h2>About Us</h2>
+            <p>We are a passionate team dedicated to creating amazing web experiences. Our goal is to demonstrate best practices in web development and showcase our abilities in HTML, CSS, and responsive design.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to get in touch? You can reach us at:</p>
+            <p>Email: contact@example.com<br>
+            Phone: (555) 123-4567<br>
+            Address: 123 Web Dev Street, Internet City, 12345</p>
+        </div>
+        
+        <footer>
+            <h2>Connect With Us</h2>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+            <p>&copy; 2025 Our Company. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
