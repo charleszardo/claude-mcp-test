@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrolling Text</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
-    <script type="module">
-        import React, { useEffect, useState } from 'react';
-        import ReactDOM from 'react-dom/client';
-
+    <script type="text/babel">
         const ScrollingText = () => {
-            const [position, setPosition] = useState(100);
+            const [position, React.useState(100)];
 
-            useEffect(() => {
+            React.useEffect(() => {
                 const animate = () => {
                     setPosition(prev => {
                         const newPos = prev - 0.5;
@@ -27,10 +27,21 @@
             }, []);
 
             return (
-                <div className="w-screen h-screen bg-black overflow-hidden flex items-center justify-center">
+                <div style={{
+                    width: '100vw',
+                    height: '100vh',
+                    backgroundColor: 'black',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                }}>
                     <div 
-                        className="text-white text-8xl font-bold whitespace-nowrap"
                         style={{
+                            color: 'white',
+                            fontSize: '5rem',
+                            fontWeight: 'bold',
+                            whiteSpace: 'nowrap',
                             transform: `translateX(${position}%)`
                         }}
                     >
@@ -40,7 +51,8 @@
             );
         };
 
-        ReactDOM.createRoot(document.getElementById('root')).render(
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(
             <React.StrictMode>
                 <ScrollingText />
             </React.StrictMode>
